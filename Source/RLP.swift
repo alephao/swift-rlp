@@ -5,6 +5,7 @@ public enum RLP {
     
     public enum Error: Swift.Error {
         case unicodeOutOfBoundaries
+        case stringToData
     }
 
     static func binaryLength(of n: UInt32) -> UInt8 {
@@ -24,8 +25,18 @@ public enum RLP {
         }
     }
     
-    public static func encode(_ string: String) -> String {
-        return ""
+    public static func encode(_ string: String) throws -> String {
+        guard let data = string.data(using: .utf8) else {
+            throw Error.stringToData
+        }
+        
+        if data.count == 1,
+            0x00...0x7f ~= data[0] {
+            return string
+        } else {
+            let encodedLength = try encodeLength(UInt32(data.count), offset: 0x80)
+            return encodedLength + string
+        }
     }
     
 }
