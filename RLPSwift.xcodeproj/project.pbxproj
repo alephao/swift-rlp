@@ -30,7 +30,7 @@
 		27756DF72021D8FF004B2339 = {
 			isa = PBXGroup;
 			children = (
-				27756E032021D8FF004B2339 /* RLPSwift */,
+				27756E0C2021D966004B2339 /* Source */,
 				27756E022021D8FF004B2339 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,13 +43,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		27756E032021D8FF004B2339 /* RLPSwift */ = {
+		27756E0C2021D966004B2339 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				27756E0F2021D980004B2339 /* Support Files */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		27756E0F2021D980004B2339 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				27756E042021D8FF004B2339 /* RLPSwift.h */,
 				27756E052021D8FF004B2339 /* Info.plist */,
 			);
-			path = RLPSwift;
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +267,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RLPSwift/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.lalacode.RLPSwift;
@@ -279,7 +287,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RLPSwift/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.lalacode.RLPSwift;
