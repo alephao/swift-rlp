@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		27756E062021D8FF004B2339 /* RLPSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 27756E042021D8FF004B2339 /* RLPSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27756E172021D9CE004B2339 /* RLPSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27756E162021D9CE004B2339 /* RLPSwiftTests.swift */; };
+		27756E172021D9CE004B2339 /* RLPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27756E162021D9CE004B2339 /* RLPTests.swift */; };
 		27756E192021D9CE004B2339 /* RLPSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27756E012021D8FF004B2339 /* RLPSwift.framework */; };
+		27756E212021DC3D004B2339 /* RLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27756E202021DC3D004B2339 /* RLP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +28,9 @@
 		27756E042021D8FF004B2339 /* RLPSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RLPSwift.h; sourceTree = "<group>"; };
 		27756E052021D8FF004B2339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27756E142021D9CE004B2339 /* RLPSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RLPSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		27756E162021D9CE004B2339 /* RLPSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLPSwiftTests.swift; sourceTree = "<group>"; };
+		27756E162021D9CE004B2339 /* RLPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLPTests.swift; sourceTree = "<group>"; };
 		27756E182021D9CE004B2339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27756E202021DC3D004B2339 /* RLP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		27756E0C2021D966004B2339 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				27756E202021DC3D004B2339 /* RLP.swift */,
 				27756E0F2021D980004B2339 /* Support Files */,
 			);
 			path = Source;
@@ -88,7 +91,7 @@
 		27756E152021D9CE004B2339 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				27756E162021D9CE004B2339 /* RLPSwiftTests.swift */,
+				27756E162021D9CE004B2339 /* RLPTests.swift */,
 				27756E1F2021D9D8004B2339 /* Support Files */,
 			);
 			path = Tests;
@@ -164,6 +167,7 @@
 				TargetAttributes = {
 					27756E002021D8FF004B2339 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					27756E132021D9CE004B2339 = {
@@ -212,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27756E212021DC3D004B2339 /* RLP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27756E172021D9CE004B2339 /* RLPSwiftTests.swift in Sources */,
+				27756E172021D9CE004B2339 /* RLPTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +355,7 @@
 		27756E0A2021D8FF004B2339 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -362,6 +368,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.lalacode.RLPSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -370,6 +377,7 @@
 		27756E0B2021D8FF004B2339 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -390,6 +398,7 @@
 		27756E1D2021D9CE004B2339 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -403,6 +412,7 @@
 		27756E1E2021D9CE004B2339 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
