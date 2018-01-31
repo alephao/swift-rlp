@@ -6,6 +6,7 @@ public enum RLP {
     public enum Error: Swift.Error {
         case unicodeOutOfBoundaries
         case stringToData
+        case invalidType(Any)
     }
 
     static func binaryLength(of n: UInt32) -> UInt8 {
@@ -37,6 +38,23 @@ public enum RLP {
             let encodedLength = try encodeLength(UInt32(data.count), offset: 0x80)
             return encodedLength + string
         }
+    }
+    
+    public static func encode(_ array: [Any]) throws -> String {
+        var output = ""
+        
+        for item in array {
+            if let string = item as? String {
+                output += try encode(string)
+            } else if let array = item as? [Any] {
+                output += try encode(array)
+            } else {
+                throw Error.invalidType(item)
+            }
+        }
+        
+        let encodedLength = try encodeLength(UInt32(output.count), offset: 0xc0)
+        return encodedLength + output
     }
     
 }
