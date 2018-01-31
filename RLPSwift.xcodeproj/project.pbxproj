@@ -8,12 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		27756E062021D8FF004B2339 /* RLPSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 27756E042021D8FF004B2339 /* RLPSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27756E172021D9CE004B2339 /* RLPSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27756E162021D9CE004B2339 /* RLPSwiftTests.swift */; };
+		27756E192021D9CE004B2339 /* RLPSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27756E012021D8FF004B2339 /* RLPSwift.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27756E1A2021D9CE004B2339 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27756DF82021D8FF004B2339 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27756E002021D8FF004B2339;
+			remoteInfo = RLPSwift;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		27756E012021D8FF004B2339 /* RLPSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RLPSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27756E042021D8FF004B2339 /* RLPSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RLPSwift.h; sourceTree = "<group>"; };
 		27756E052021D8FF004B2339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27756E142021D9CE004B2339 /* RLPSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RLPSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27756E162021D9CE004B2339 /* RLPSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLPSwiftTests.swift; sourceTree = "<group>"; };
+		27756E182021D9CE004B2339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +39,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27756E112021D9CE004B2339 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27756E192021D9CE004B2339 /* RLPSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -31,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				27756E0C2021D966004B2339 /* Source */,
+				27756E152021D9CE004B2339 /* Tests */,
 				27756E022021D8FF004B2339 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				27756E012021D8FF004B2339 /* RLPSwift.framework */,
+				27756E142021D9CE004B2339 /* RLPSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +81,23 @@
 			children = (
 				27756E042021D8FF004B2339 /* RLPSwift.h */,
 				27756E052021D8FF004B2339 /* Info.plist */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		27756E152021D9CE004B2339 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				27756E162021D9CE004B2339 /* RLPSwiftTests.swift */,
+				27756E1F2021D9D8004B2339 /* Support Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		27756E1F2021D9D8004B2339 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				27756E182021D9CE004B2339 /* Info.plist */,
 			);
 			name = "Support Files";
 			sourceTree = "<group>";
@@ -92,16 +134,39 @@
 			productReference = 27756E012021D8FF004B2339 /* RLPSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		27756E132021D9CE004B2339 /* RLPSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27756E1C2021D9CE004B2339 /* Build configuration list for PBXNativeTarget "RLPSwiftTests" */;
+			buildPhases = (
+				27756E102021D9CE004B2339 /* Sources */,
+				27756E112021D9CE004B2339 /* Frameworks */,
+				27756E122021D9CE004B2339 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27756E1B2021D9CE004B2339 /* PBXTargetDependency */,
+			);
+			name = RLPSwiftTests;
+			productName = RLPSwiftTests;
+			productReference = 27756E142021D9CE004B2339 /* RLPSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		27756DF82021D8FF004B2339 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Lalacode;
 				TargetAttributes = {
 					27756E002021D8FF004B2339 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					27756E132021D9CE004B2339 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -120,12 +185,20 @@
 			projectRoot = "";
 			targets = (
 				27756E002021D8FF004B2339 /* RLPSwift */,
+				27756E132021D9CE004B2339 /* RLPSwiftTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		27756DFF2021D8FF004B2339 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27756E122021D9CE004B2339 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -142,7 +215,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27756E102021D9CE004B2339 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27756E172021D9CE004B2339 /* RLPSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27756E1B2021D9CE004B2339 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27756E002021D8FF004B2339 /* RLPSwift */;
+			targetProxy = 27756E1A2021D9CE004B2339 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		27756E072021D8FF004B2339 /* Debug */ = {
@@ -298,6 +387,32 @@
 			};
 			name = Release;
 		};
+		27756E1D2021D9CE004B2339 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.lalacode.RLPSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27756E1E2021D9CE004B2339 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.lalacode.RLPSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -315,6 +430,15 @@
 			buildConfigurations = (
 				27756E0A2021D8FF004B2339 /* Debug */,
 				27756E0B2021D8FF004B2339 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27756E1C2021D9CE004B2339 /* Build configuration list for PBXNativeTarget "RLPSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27756E1D2021D9CE004B2339 /* Debug */,
+				27756E1E2021D9CE004B2339 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
