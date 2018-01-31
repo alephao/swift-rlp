@@ -7,6 +7,12 @@ import RLPSwift
 
 class RLPTests: XCTestCase {
     
+    func testEncodeLength() {
+        XCTAssertEqual(try? RLP.encodeLength(0x00, offset: 0x80), "\u{80}")
+        XCTAssertEqual(try? RLP.encodeLength(0x0400, offset: 0x80), "\u{b9}\u{400}")
+        XCTAssertEqual(try? RLP.encodeLength(0x11170, offset: 0x80), "\u{ba}\u{11170}")
+    }
+    
     func testEncodeEmptyString() {
         XCTAssertEqual(RLP.encode(""), "\u{80}")
     }
