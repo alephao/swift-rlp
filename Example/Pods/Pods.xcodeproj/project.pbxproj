@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		18249EDBB2AE5191F59E72021FD3D7F2 /* Pods-RLPSwiftExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42361C8EB010CB71075267293874C688 /* Pods-RLPSwiftExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48CCCF6F0596EFF2005D7512D44CBB5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		87F9C329D5544789B917B3C37664762F /* RLPSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 12C0554232B83F14CE0328C79D05BDCF /* RLPSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87F9C329D5544789B917B3C37664762F /* RLPSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D8E21206D9A30D4409B283965DF1A8 /* RLPSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9698DC1F30141E9882DD45EAFC623637 /* Pods-RLPSwiftExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBA6C64F7DF48B9F4CB0B6F97663546 /* Pods-RLPSwiftExample-dummy.m */; };
-		A66A7DCF83C6103FE1E4138A39AF56C2 /* RLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89299DF01AD5F4D9976149896392FC46 /* RLP.swift */; };
-		C8B9FE7B7C28DE31B7E094CDA014B370 /* RLPSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E4626F9FC49A8492E028C0F29664134C /* RLPSwift-dummy.m */; };
+		A66A7DCF83C6103FE1E4138A39AF56C2 /* RLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC921E287DF871F08AE5F0664CDBCA81 /* RLP.swift */; };
+		C8B9FE7B7C28DE31B7E094CDA014B370 /* RLPSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E4B4BAC8CC2973AE3F75F16E9BD3E /* RLPSwift-dummy.m */; };
 		DEAFF047F6942D2B6C05C08ABE0E4CC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		F0FB002DAF750F9DED32B5DFED728835 /* RLPSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = A4523EFA2A8F96FF956C9FF789513921 /* RLPSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0FB002DAF750F9DED32B5DFED728835 /* RLPSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 76A98F71A03C1CD1CF68397DDAC8347F /* RLPSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,28 +28,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		043FD4493FABA6F90DBA3C3FBDF49E8D /* RLPSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RLPSwift.modulemap; sourceTree = "<group>"; };
-		12C0554232B83F14CE0328C79D05BDCF /* RLPSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RLPSwift-umbrella.h"; sourceTree = "<group>"; };
+		0498CD126BE7BB9ED7FEEAFCA5C384CA /* RLPSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RLPSwift.xcconfig; sourceTree = "<group>"; };
 		150F7BF84A54121F4F5B8EDA6793C2E7 /* Pods-RLPSwiftExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RLPSwiftExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		15E3F99B1723A3E34252D1B413B211DB /* Pods_RLPSwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RLPSwiftExample.framework; path = "Pods-RLPSwiftExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		303EFFC3F3F1CA7455972A6A66724FA8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FEE3EA76399F441AD0876867174DCCD /* RLPSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RLPSwift-prefix.pch"; sourceTree = "<group>"; };
+		2E0E4B4BAC8CC2973AE3F75F16E9BD3E /* RLPSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RLPSwift-dummy.m"; sourceTree = "<group>"; };
 		42361C8EB010CB71075267293874C688 /* Pods-RLPSwiftExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RLPSwiftExample-umbrella.h"; sourceTree = "<group>"; };
+		4745F48761AC442F0A48FDF867F5AC93 /* RLPSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RLPSwift-prefix.pch"; sourceTree = "<group>"; };
+		61D8E21206D9A30D4409B283965DF1A8 /* RLPSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RLPSwift-umbrella.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		76A98F71A03C1CD1CF68397DDAC8347F /* RLPSwift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLPSwift.h; path = Source/RLPSwift.h; sourceTree = "<group>"; };
 		83464A405FAB879F3BDA91A50BC7D9C6 /* Pods-RLPSwiftExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RLPSwiftExample-frameworks.sh"; sourceTree = "<group>"; };
 		86865DAB38360BE3BB6965F22C377E4C /* Pods-RLPSwiftExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-RLPSwiftExample.modulemap"; sourceTree = "<group>"; };
 		86F4138EAC1E40962AE3B8C5310086F9 /* Pods-RLPSwiftExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RLPSwiftExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		89299DF01AD5F4D9976149896392FC46 /* RLP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RLP.swift; path = Source/RLP.swift; sourceTree = "<group>"; };
 		89F267059FAF8EF21C2EE80E023A1482 /* RLPSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RLPSwift.framework; path = RLPSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A4523EFA2A8F96FF956C9FF789513921 /* RLPSwift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLPSwift.h; path = Source/RLPSwift.h; sourceTree = "<group>"; };
+		AAC91CB5753A56BE0029520390D0986E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B99D80CDFD19CB67EDA88454B0D5AF98 /* Pods-RLPSwiftExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RLPSwiftExample.debug.xcconfig"; sourceTree = "<group>"; };
 		DC4E14426D3A14404223773392D417FE /* Pods-RLPSwiftExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RLPSwiftExample-resources.sh"; sourceTree = "<group>"; };
 		DFBA6C64F7DF48B9F4CB0B6F97663546 /* Pods-RLPSwiftExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RLPSwiftExample-dummy.m"; sourceTree = "<group>"; };
-		E4626F9FC49A8492E028C0F29664134C /* RLPSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RLPSwift-dummy.m"; sourceTree = "<group>"; };
 		E5853C15E191A0B485BB7E71C980C917 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDB2DB7B0904B33B6033CB8BC25B13D0 /* RLPSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RLPSwift.modulemap; sourceTree = "<group>"; };
 		F44B2555412AB5AA7774318E5F57C28D /* Pods-RLPSwiftExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RLPSwiftExample.release.xcconfig"; sourceTree = "<group>"; };
-		F46E3A6D1678C18D8EB27A4150FDFCEE /* RLPSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RLPSwift.xcconfig; sourceTree = "<group>"; };
+		FC921E287DF871F08AE5F0664CDBCA81 /* RLP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RLP.swift; path = Source/RLP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 		26A4E234E032A7EF392B98952D9F616A /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				931455F032F9F856B149C3492BE3A4BB /* RLPSwift */,
+				8E738B407808AF9F10078EE2F55B9431 /* RLPSwift */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -91,29 +91,15 @@
 			);
 			sourceTree = "<group>";
 		};
-		931455F032F9F856B149C3492BE3A4BB /* RLPSwift */ = {
+		8E738B407808AF9F10078EE2F55B9431 /* RLPSwift */ = {
 			isa = PBXGroup;
 			children = (
-				89299DF01AD5F4D9976149896392FC46 /* RLP.swift */,
-				A4523EFA2A8F96FF956C9FF789513921 /* RLPSwift.h */,
-				AB2A67722598A128FF60C59470E5C7CD /* Support Files */,
+				FC921E287DF871F08AE5F0664CDBCA81 /* RLP.swift */,
+				76A98F71A03C1CD1CF68397DDAC8347F /* RLPSwift.h */,
+				FB1B51E7529A7AB0C555A1EAA62C7C1B /* Support Files */,
 			);
 			name = RLPSwift;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		AB2A67722598A128FF60C59470E5C7CD /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				303EFFC3F3F1CA7455972A6A66724FA8 /* Info.plist */,
-				043FD4493FABA6F90DBA3C3FBDF49E8D /* RLPSwift.modulemap */,
-				F46E3A6D1678C18D8EB27A4150FDFCEE /* RLPSwift.xcconfig */,
-				E4626F9FC49A8492E028C0F29664134C /* RLPSwift-dummy.m */,
-				3FEE3EA76399F441AD0876867174DCCD /* RLPSwift-prefix.pch */,
-				12C0554232B83F14CE0328C79D05BDCF /* RLPSwift-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "RLPSwiftExample/Pods/Target Support Files/RLPSwift";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -165,6 +151,20 @@
 				CAC2E10CC107648741D852ADC370B1A8 /* Pods-RLPSwiftExample */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FB1B51E7529A7AB0C555A1EAA62C7C1B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAC91CB5753A56BE0029520390D0986E /* Info.plist */,
+				EDB2DB7B0904B33B6033CB8BC25B13D0 /* RLPSwift.modulemap */,
+				0498CD126BE7BB9ED7FEEAFCA5C384CA /* RLPSwift.xcconfig */,
+				2E0E4B4BAC8CC2973AE3F75F16E9BD3E /* RLPSwift-dummy.m */,
+				4745F48761AC442F0A48FDF867F5AC93 /* RLPSwift-prefix.pch */,
+				61D8E21206D9A30D4409B283965DF1A8 /* RLPSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/RLPSwift";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,7 +339,7 @@
 		};
 		877EF20228E19963137E803F38B164FC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F46E3A6D1678C18D8EB27A4150FDFCEE /* RLPSwift.xcconfig */;
+			baseConfigurationReference = 0498CD126BE7BB9ED7FEEAFCA5C384CA /* RLPSwift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -370,7 +370,7 @@
 		};
 		9E63D4FA43024A1C156ECE44E4FA8132 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F46E3A6D1678C18D8EB27A4150FDFCEE /* RLPSwift.xcconfig */;
+			baseConfigurationReference = 0498CD126BE7BB9ED7FEEAFCA5C384CA /* RLPSwift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
