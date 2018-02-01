@@ -1,0 +1,6 @@
+framework module Pods_RLPSwiftExample {
+  umbrella header "Pods-RLPSwiftExample-umbrella.h"
+
+  export *
+  module * { export * }
+}
