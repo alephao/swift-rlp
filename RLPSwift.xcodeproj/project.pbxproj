@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271FE239202348C7006EC9AE /* UInt32+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271FE238202348C7006EC9AE /* UInt32+Extensions.swift */; };
+		271FE23B2023526A006EC9AE /* UInt32ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271FE23A2023526A006EC9AE /* UInt32ExtensionsTests.swift */; };
 		2771CB8C2021F12E003A1E13 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2771CB8A2021F12D003A1E13 /* LICENSE */; };
 		2771CB8D2021F12E003A1E13 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2771CB8B2021F12D003A1E13 /* README.md */; };
 		27756E062021D8FF004B2339 /* RLPSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 27756E042021D8FF004B2339 /* RLPSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		271FE238202348C7006EC9AE /* UInt32+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt32+Extensions.swift"; sourceTree = "<group>"; };
+		271FE23A2023526A006EC9AE /* UInt32ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UInt32ExtensionsTests.swift; sourceTree = "<group>"; };
 		2771CB8A2021F12D003A1E13 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2771CB8B2021F12D003A1E13 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		27756E012021D8FF004B2339 /* RLPSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RLPSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		271FE237202348B9006EC9AE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				271FE238202348C7006EC9AE /* UInt32+Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		27756DF72021D8FF004B2339 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				27756E202021DC3D004B2339 /* RLP.swift */,
+				271FE237202348B9006EC9AE /* Extensions */,
 				27756E0F2021D980004B2339 /* Support Files */,
 			);
 			path = Source;
@@ -98,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				27756E162021D9CE004B2339 /* RLPTests.swift */,
+				271FE23A2023526A006EC9AE /* UInt32ExtensionsTests.swift */,
 				27756E1F2021D9D8004B2339 /* Support Files */,
 			);
 			path = Tests;
@@ -224,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271FE239202348C7006EC9AE /* UInt32+Extensions.swift in Sources */,
 				27756E212021DC3D004B2339 /* RLP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271FE23B2023526A006EC9AE /* UInt32ExtensionsTests.swift in Sources */,
 				27756E172021D9CE004B2339 /* RLPTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
