@@ -1,5 +1,5 @@
 PODS:
-  - RLPSwift (0.0.1)
+  - RLPSwift (0.0.2)
 
 DEPENDENCIES:
   - RLPSwift (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  RLPSwift: 2e1e6269ab0d9b8858edfc340630a8e6fa727974
+  RLPSwift: 125af65a01a582a434e1c6475daffdbb23c24b47
 
 PODFILE CHECKSUM: 84b2a78a8f8ade04a04408cb4b394e57a75da70b
 
