@@ -3,10 +3,18 @@
 
 public enum RLP {
     public enum Error: Swift.Error {
-        case unicodeOutOfBoundaries
         case stringToData
         case dataToString
-        case invalidType(Any)
+        case invalidObject(ofType: Any.Type, expected: Any.Type)
+        
+        public var localizedDescription: String {
+            switch self {
+            case .stringToData: return "Failed to convert String to Data"
+            case .dataToString: return "Failed to convert Data to String"
+            case .invalidObject(let got, let expected):
+                return "Invalid object, expected \(expected), but got \(got)"
+            }
+        }
     }
 }
 
@@ -51,7 +59,7 @@ public extension RLP {
             } else if let array = item as? [Any] {
                 output.append(try encode(nestedArrayOfData: array))
             } else {
-                throw Error.invalidType(item)
+                throw Error.invalidObject(ofType: Mirror(reflecting: item).subjectType, expected: Data.self)
             }
         }
         let encodedLength = encodeLength(UInt32(output.count), offset: 0xc0)
@@ -81,7 +89,7 @@ public extension RLP {
             } else if let array = item as? [Any] {
                 output.append(try encode(nestedArrayOfString: array, encodeStringsWith: encoding))
             } else {
-                throw Error.invalidType(item)
+                throw Error.invalidObject(ofType: Mirror(reflecting: item).subjectType, expected: String.self)
             }
         }
         
