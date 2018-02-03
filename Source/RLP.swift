@@ -11,7 +11,7 @@ public enum RLP {
 }
 
 // MARK: Internal helpers
-public extension RLP {
+internal extension RLP {
     static func binaryLength(of n: UInt32) -> UInt8 {
         return UInt8(ceil(log10(Double(n))/log10(Double(UInt8.max))))
     }
