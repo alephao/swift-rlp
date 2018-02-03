@@ -1,0 +1,3 @@
+language: swift
+xcode_project: RLPSwift.xcodeproj
+xcode_scheme: RLPSwiftTests
