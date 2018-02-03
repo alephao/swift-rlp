@@ -1,7 +1,7 @@
 # RLPSwift
 [![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Platforms iOS](https://img.shields.io/badge/Platforms-iOS-lightgray.svg?style=flat)](https://developer.apple.com/swift/)
-[![pod v0.0.2](https://img.shields.io/badge/pod-v0.0.2-blue.svg)](https://cocoapods.org)
+[![pod v0.0.3](https://img.shields.io/badge/pod-v0.0.3-blue.svg)](https://cocoapods.org)
 
 This is a basic Swift implementation of Recursive Length Prefix Encoding, a serialisation method for encoding arbitrarily structured binary data (byte arrays).
 
@@ -9,16 +9,20 @@ You can read more about it here:
 * [Ethereum Wiki - RLP](https://github.com/ethereum/wiki/wiki/RLP)
 * [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf) (Appendix B)
 
-# Getting Started
-
-Encoding Strings and nested arrays of String
+# Interface
 
 ```swift
-// Encoding strings
-try! RLP.encode("dog") // \u{83}dog
+// Encoding Data
+RLP.encode(_ data: Data) -> Data
 
-// Encoding arrays is just as easy
-try! RLP.encode(["cat", "dog"]) // \u{c8}\u{83}cat\u{83}dog
+// Encoding String
+RLP.encode(_ string: String, with encoding: String.Encoding = .ascii) throws -> Data
+
+// Encoding nested array of Data
+RLP.encode(nestedArrayOfData array: [Any]) throws -> Data
+
+// Encoding nested array of String
+RLP.encode(nestedArrayOfString array: [Any], encodeStringsWith encoding: String.Encoding = .ascii) throws -> Data
 ```
 
 # Installation
