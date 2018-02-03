@@ -2,14 +2,16 @@
 //  Copyright © 2018 Lalacode. All rights reserved.
 
 public enum RLP {
-    
     public enum Error: Swift.Error {
         case unicodeOutOfBoundaries
         case stringToData
         case dataToString
         case invalidType(Any)
     }
+}
 
+// MARK: Internal helpers
+public extension RLP {
     static func binaryLength(of n: UInt32) -> UInt8 {
         return UInt8(ceil(log10(Double(n))/log10(Double(UInt8.max))))
     }
@@ -25,7 +27,10 @@ public enum RLP {
             return Data(bytes: bytes)
         }
     }
-    
+}
+
+// MARK: Data encoding
+public extension RLP {
     public static func encode(_ bytes: Data) -> Data {
         if bytes.count == 1,
             0x00...0x7f ~= bytes[0] {
@@ -37,35 +42,49 @@ public enum RLP {
         }
     }
     
-    public static func encode(_ string: String) throws -> String {
-        guard let data = string.data(using: .ascii) else {
+    public static func encode(nestedArrayOfData array: [Any]) throws -> Data {
+        var output = Data()
+        
+        for item in array {
+            if let data = item as? Data {
+                output.append(encode(data))
+            } else if let array = item as? [Any] {
+                output.append(try encode(nestedArrayOfData: array))
+            } else {
+                throw Error.invalidType(item)
+            }
+        }
+        let encodedLength = encodeLength(UInt32(output.count), offset: 0xc0)
+        output.insert(contentsOf: encodedLength, at: 0)
+        return output
+    }
+}
+
+// MARK: String encoding
+public extension RLP {
+    public static func encode(_ string: String, with encoding: String.Encoding = .ascii) throws -> Data {
+        guard let data = string.data(using: encoding) else {
             throw Error.stringToData
         }
-
+        
         let bytes = encode(data)
         
-        guard let result = String(data: bytes, encoding: .ascii) else {
-            throw Error.dataToString
+        return bytes
+    }
+    
+    public static func encode(nestedArrayOfString array: [Any], encodeStringsWith encoding: String.Encoding = .ascii) throws -> Data {
+        var output = Data()
+        
+        for item in array {
+            if let string = item as? String {
+                output.append(try encode(string, with: .ascii))
+            } else if let array = item as? [Any] {
+                output.append(try encode(nestedArrayOfString: array, encodeStringsWith: encoding))
+            } else {
+                throw Error.invalidType(item)
+            }
         }
         
-        return result
+        return output
     }
-//
-//    public static func encode(_ array: [Any]) throws -> String {
-//        var output = ""
-//
-//        for item in array {
-//            if let string = item as? String {
-//                output += try encode(string)
-//            } else if let array = item as? [Any] {
-//                output += try encode(array)
-//            } else {
-//                throw Error.invalidType(item)
-//            }
-//        }
-//
-//        let encodedLength = try encodeLength(UInt32(output.count), offset: 0xc0)
-//        return encodedLength + output
-//    }
-    
 }

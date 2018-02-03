@@ -24,28 +24,29 @@ class RLPTests: XCTestCase {
     }
 
     func testEncodeDataWithSingleByte() {
-        XCTAssertEqual(try? RLP.encode("0"), "0")
-        XCTAssertEqual(try? RLP.encode("a"), "a")
-        XCTAssertEqual(try? RLP.encode("{"), "{")
+        XCTAssertEqual(try? RLP.encode("0"), Data(bytes: [0x30]))
+        XCTAssertEqual(try? RLP.encode("a"), Data(bytes: [0x61]))
+        XCTAssertEqual(try? RLP.encode("{"), Data(bytes: [0x7b]))
     }
     
     func testEncodeEmptyString() {
-        XCTAssertEqual(try? RLP.encode(""), "\u{80}")
+        XCTAssertEqual(try? RLP.encode(""), Data(bytes: [0x80]))
     }
 
     func testEncodeStringSmallerThanOrEqualTo55Bytes() {
-        XCTAssertEqual(try? RLP.encode("100"), "\u{83}100")
-        XCTAssertEqual(try? RLP.encode("Lorem ipsum dolor sit amet"), "\u{9a}Lorem ipsum dolor sit amet")
+        XCTAssertEqual(try? RLP.encode("100"), Data(bytes: [0x83, 0x31, 0x30, 0x30]))
+        XCTAssertEqual(try? RLP.encode("Lorem ipsum dolor sit amet"), Data(bytes: [0x9a, 0x4c, 0x6f, 0x72, 0x65, 0x6d, 0x20, 0x69, 0x70, 0x73, 0x75, 0x6d, 0x20, 0x64, 0x6f, 0x6c, 0x6f, 0x72, 0x20, 0x73, 0x69, 0x74, 0x20, 0x61, 0x6d, 0x65, 0x74]))
 
         let string55 = [String](repeating: "a", count: 55).reduce("", +)
-        XCTAssertEqual(try? RLP.encode(string55), "\u{b7}\(string55)")
+        let expectedBytes: [UInt8] = [0xb7] + [UInt8](repeating: 0x61, count: 55)
+        
+        XCTAssertEqual(try? RLP.encode(string55), Data(bytes: expectedBytes))
     }
 
     func testEncodeStringGreaterThan55Bytes() {
-        XCTAssertEqual(try? RLP.encode("Lorem ipsum dolor sit amet, consectetur adipisicing elit"), "\u{b8}\u{38}Lorem ipsum dolor sit amet, consectetur adipisicing elit")
-
         let stringWith400a = [String](repeating: "a", count: 400).reduce("", +)
-        XCTAssertEqual(try? RLP.encode(stringWith400a), "\u{b9}\u{190}\(stringWith400a)")
+        let expectedBytes: [UInt8] = [0xb9, 0x00, 0x00, 0x01, 0x90] + [UInt8](repeating: 0x61, count: 400)
+        XCTAssertEqual(try? RLP.encode(stringWith400a), Data(bytes: expectedBytes))
     }
 
 
