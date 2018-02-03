@@ -15,10 +15,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     
         do {
-            let encoded = try RLP.encode("hello world")
+            let encoded = try RLP.encode("dog")
             print("Success: \(encoded)")
         } catch {
-            print("Error: \(error)")
+            print("Error: \(error.localizedDescription)")
         }
     }
     
