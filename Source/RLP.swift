@@ -31,13 +31,13 @@ internal extension RLP {
 
 // MARK: Data encoding
 public extension RLP {
-    public static func encode(_ bytes: Data) -> Data {
-        if bytes.count == 1,
-            0x00...0x7f ~= bytes[0] {
-            return bytes
+    public static func encode(_ data: Data) -> Data {
+        if data.count == 1,
+            0x00...0x7f ~= data[0] {
+            return data
         } else {
-            var result = encodeLength(UInt32(bytes.count), offset: 0x80)
-            result.append(contentsOf: bytes)
+            var result = encodeLength(UInt32(data.count), offset: 0x80)
+            result.append(contentsOf: data)
             return result
         }
     }
