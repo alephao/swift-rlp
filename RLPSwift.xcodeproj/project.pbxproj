@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		271FE239202348C7006EC9AE /* UInt32+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271FE238202348C7006EC9AE /* UInt32+Extensions.swift */; };
+		271FE239202348C7006EC9AE /* UInt32+byteArrayLittleEndian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271FE238202348C7006EC9AE /* UInt32+byteArrayLittleEndian.swift */; };
 		271FE23B2023526A006EC9AE /* UInt32ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271FE23A2023526A006EC9AE /* UInt32ExtensionsTests.swift */; };
 		271FE23F202557F1006EC9AE /* RLPSwift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 271FE23E202557F1006EC9AE /* RLPSwift.podspec */; };
 		2771CB8C2021F12E003A1E13 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2771CB8A2021F12D003A1E13 /* LICENSE */; };
@@ -29,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		271FE238202348C7006EC9AE /* UInt32+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt32+Extensions.swift"; sourceTree = "<group>"; };
+		271FE238202348C7006EC9AE /* UInt32+byteArrayLittleEndian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt32+byteArrayLittleEndian.swift"; sourceTree = "<group>"; };
 		271FE23A2023526A006EC9AE /* UInt32ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UInt32ExtensionsTests.swift; sourceTree = "<group>"; };
 		271FE23E202557F1006EC9AE /* RLPSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RLPSwift.podspec; sourceTree = "<group>"; };
 		2771CB8A2021F12D003A1E13 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		271FE237202348B9006EC9AE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				271FE238202348C7006EC9AE /* UInt32+Extensions.swift */,
+				271FE238202348C7006EC9AE /* UInt32+byteArrayLittleEndian.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				271FE239202348C7006EC9AE /* UInt32+Extensions.swift in Sources */,
+				271FE239202348C7006EC9AE /* UInt32+byteArrayLittleEndian.swift in Sources */,
 				27756E212021DC3D004B2339 /* RLP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
