@@ -42,9 +42,6 @@ Then run `pod install`.
 In any file you'd like to use RLPSwift in, don't forget to
 import the framework with `import RLPSwift`.
 
-### Manually
-Download and drop RLP.swift inside your project.
-
 # License
 
 RLPSwift is released under an [MIT](https://tldrlegal.com/license/mit-license) license. See [LICENSE](LICENSE) for more information.
