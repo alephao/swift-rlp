@@ -8,5 +8,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/bitfwdcommunity/RLPSwift.git", :tag => "v#{s.version}" }
   s.platform     = :ios
   s.ios.deployment_target = '9.0'
-  s.source_files  = "Source"
+  s.source_files  = "Sources/RLPSwift"
 end
