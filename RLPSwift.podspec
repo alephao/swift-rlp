@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.author       = "Aleph Retamal"
   s.summary      = "Recursive Length Prefix encoding written in Swift"
   s.source       = { :git => "https://github.com/bitfwdcommunity/RLPSwift.git", :tag => "v#{s.version}" }
-  s.platform     = :ios
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target  = '9.0'
+  s.osx.deployment_target  = '10.10'
   s.source_files  = "Sources/RLPSwift"
 end

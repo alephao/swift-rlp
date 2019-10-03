@@ -6,6 +6,7 @@ let package = Package(
     name: "RLPSwift",
     platforms: [
         .iOS(.v9),
+        .macOS(.v10_14)
     ],
     products: [
         .library(
