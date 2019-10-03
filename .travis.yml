@@ -1,11 +1,8 @@
 os: osx
 language: swift
-xcode_project: RLPSwift.xcodeproj
-xcode_scheme: RLPSwiftTests
-osx_image: xcode10.3
-install:
-  - sudo gem install fastlane -N
+osx_image: xcode11
 script:
-  - fastlane scan
+  - swift build
+  - swift test --enable-code-coverage
 after_success:
   - bash <(curl -s https://codecov.io/bash)
