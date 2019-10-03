@@ -1,7 +1,6 @@
 # RLPSwift
-[![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
-[![Platforms iOS](https://img.shields.io/badge/Platforms-iOS-lightgray.svg?style=flat)](https://developer.apple.com/swift/)
-[![pod v0.0.3](https://img.shields.io/badge/pod-v0.0.3-blue.svg)](https://cocoapods.org)
+[![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![pod v0.0.4](https://img.shields.io/badge/pod-v0.0.4-blue.svg)](https://cocoapods.org)
 [![Travis CI](https://travis-ci.org/bitfwdcommunity/RLPSwift.svg?branch=master)](https://travis-ci.org/bitfwdcommunity/RLPSwift)
 [![codecov.io](https://codecov.io/gh/bitfwdcommunity/RLPSwift/branch/master/graph/badge.svg)](https://codecov.io/gh/bitfwdcommunity/RLPSwift/branch/master)
 
@@ -29,18 +28,30 @@ RLP.encode(nestedArrayOfString array: [Any], encodeStringsWith encoding: String.
 
 # Installation
 
+## Cocoapods
+
 RLPSwift is available through [CocoaPods](http://cocoapods.org).
 
 To install RLPSwift via cocoapods, add the following line to your Podfile:
 
-```
+```ruby
 pod 'RLPSwift'
 ```
 
 Then run `pod install`.
 
-In any file you'd like to use RLPSwift in, don't forget to
-import the framework with `import RLPSwift`.
+
+## Swift Package Manager
+
+RLPSwift is available through [Swift Package Manager](https://swift.org/package-manager/).
+
+Once you have your Swift package set up, adding RLPSwift as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+  .package(url: "https://github.com/bitfwdcommunity/RLPSwift.git", from: "0.0.4")
+]
+```
 
 # License
 
