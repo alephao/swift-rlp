@@ -2,7 +2,7 @@ os: osx
 language: swift
 xcode_project: RLPSwift.xcodeproj
 xcode_scheme: RLPSwiftTests
-osx_image: xcode9.2
+osx_image: xcode10.3
 install:
   - sudo gem install fastlane -N
 script:

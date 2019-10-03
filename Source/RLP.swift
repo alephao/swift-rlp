@@ -29,19 +29,19 @@ internal extension RLP {
     static func encodeLength(_ length: UInt32, offset: UInt8) -> Data {
         if length < 56 {
             let lengthByte = offset + UInt8(length)
-            return Data(bytes: [lengthByte])
+            return Data([lengthByte])
         } else {
             let firstByte = offset + 55 + binaryLength(of: length)
             var bytes = [firstByte]
             bytes.append(contentsOf: length.byteArrayLittleEndian)
-            return Data(bytes: bytes)
+            return Data(bytes)
         }
     }
 }
 
 // MARK: Data encoding
 public extension RLP {
-    public static func encode(_ data: Data) -> Data {
+    static func encode(_ data: Data) -> Data {
         if data.count == 1,
             0x00...0x7f ~= data[0] {
             return data
@@ -52,7 +52,7 @@ public extension RLP {
         }
     }
     
-    public static func encode(nestedArrayOfData array: [Any]) throws -> Data {
+    static func encode(nestedArrayOfData array: [Any]) throws -> Data {
         var output = Data()
         
         for item in array {
@@ -72,7 +72,7 @@ public extension RLP {
 
 // MARK: String encoding
 public extension RLP {
-    public static func encode(_ string: String, with encoding: String.Encoding = .ascii) throws -> Data {
+    static func encode(_ string: String, with encoding: String.Encoding = .ascii) throws -> Data {
         guard let data = string.data(using: encoding) else {
             throw Error.stringToData
         }
@@ -82,7 +82,7 @@ public extension RLP {
         return bytes
     }
     
-    public static func encode(nestedArrayOfString array: [Any], encodeStringsWith encoding: String.Encoding = .ascii) throws -> Data {
+    static func encode(nestedArrayOfString array: [Any], encodeStringsWith encoding: String.Encoding = .ascii) throws -> Data {
         var output = Data()
         
         for item in array {
