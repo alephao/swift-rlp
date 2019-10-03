@@ -1,6 +1,0 @@
-framework module RLPSwift {
-  umbrella header "RLPSwift-umbrella.h"
-
-  export *
-  module * { export * }
-}
