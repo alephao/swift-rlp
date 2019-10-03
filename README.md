@@ -10,7 +10,7 @@ You can read more about it here:
 * [Ethereum Wiki - RLP](https://github.com/ethereum/wiki/wiki/RLP)
 * [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf) (Appendix B)
 
-# Interface
+## Interface
 
 ```swift
 // Encoding Data
@@ -26,9 +26,9 @@ RLP.encode(nestedArrayOfData array: [Any]) throws -> Data
 RLP.encode(nestedArrayOfString array: [Any], encodeStringsWith encoding: String.Encoding = .ascii) throws -> Data
 ```
 
-# Installation
+## Installation
 
-## Cocoapods
+### Cocoapods
 
 RLPSwift is available through [CocoaPods](http://cocoapods.org).
 
@@ -41,7 +41,7 @@ pod 'RLPSwift'
 Then run `pod install`.
 
 
-## Swift Package Manager
+### Swift Package Manager
 
 RLPSwift is available through [Swift Package Manager](https://swift.org/package-manager/).
 
@@ -53,6 +53,6 @@ dependencies: [
 ]
 ```
 
-# License
+## License
 
 RLPSwift is released under an [MIT](https://tldrlegal.com/license/mit-license) license. See [LICENSE](LICENSE) for more information.
