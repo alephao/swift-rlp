@@ -1,6 +1,8 @@
 //  Created by Aleph Retamal on 31/1/18.
 //  Copyright © 2018 Lalacode. All rights reserved.
 
+import Foundation
+
 public enum RLP {
     public enum Error: Swift.Error {
         case stringToData
