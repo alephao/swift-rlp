@@ -1,4 +1,5 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.0
+
 import PackageDescription
 
 let package = Package(
@@ -9,18 +10,14 @@ let package = Package(
     products: [
         .library(
             name: "RLPSwift",
-            targets: ["RLPSwift"]),
-    ],
-    dependencies: [
+            targets: ["RLPSwift"]
+        ),
     ],
     targets: [
-        .target(
-            name: "RLPSwift",
-        dependencies: [],
-        path: "Source"),
+        .target(name: "RLPSwift"),
         .testTarget(
-        name: "RLPSwiftTests",
-        dependencies: ["RLPSwift"],
-        path: "Tests")
+            name: "RLPSwiftTests",
+            dependencies: ["RLPSwift"]
+        ),
     ]
 )
