@@ -72,7 +72,7 @@ public extension RLP {
 // MARK: String encoding
 
 public extension RLP {
-    static func encode(_ string: String, with encoding: String.Encoding = .utf8) throws -> Data {
+    static func encode(with encoding: String.Encoding = .utf8, _ string: String) throws -> Data {
         guard let data = string.data(using: encoding) else {
             throw Error.stringToData
         }
@@ -82,14 +82,14 @@ public extension RLP {
         return bytes
     }
 
-    static func encode(nestedArrayOfString array: [Any], encodeStringsWith encoding: String.Encoding = .utf8) throws -> Data {
+    static func encode(encodeStringsWith encoding: String.Encoding = .utf8, nestedArrayOfString array: [Any]) throws -> Data {
         var output = Data()
 
         for item in array {
             if let string = item as? String {
-                output.append(try encode(string, with: .utf8))
+                output.append(try encode(with: .utf8, string))
             } else if let array = item as? [Any] {
-                output.append(try encode(nestedArrayOfString: array, encodeStringsWith: encoding))
+                output.append(try encode(encodeStringsWith: encoding, nestedArrayOfString: array))
             } else {
                 throw Error.invalidObject(ofType: Mirror(reflecting: item).subjectType, expected: String.self)
             }
