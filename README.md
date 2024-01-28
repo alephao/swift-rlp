@@ -49,7 +49,7 @@ Once you have your Swift package set up, adding RLPSwift as a dependency is as e
 
 ```swift
 dependencies: [
-  .package(url: "https://github.com/bitfwdcommunity/RLPSwift.git", from: "0.0.4")
+  .package(url: "https://github.com/alephao/RLPSwift.git", from: "0.0.4")
 ]
 ```
 
