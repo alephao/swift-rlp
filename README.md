@@ -1,6 +1,6 @@
 # RLPSwift
 [![Swift 5.9](https://img.shields.io/badge/Swift-5.9-orange.svg?style=flat)](https://developer.apple.com/swift/)
-[![Version](https://img.shields.io/cocoapods/v/RLPSwift.svg?stlyle=flat)](https://cocoapods.org/pods/RLPSwift)
+[![Version](https://img.shields.io/badge/SPM-0.0.4-orange.svg?stlyle=flat)](https://github.com/alephao/RLPSwift/releases/tag/v0.0.4)
 [![Travis CI](https://travis-ci.org/bitfwdcommunity/RLPSwift.svg?branch=master)](https://travis-ci.org/bitfwdcommunity/RLPSwift)
 [![codecov.io](https://codecov.io/gh/bitfwdcommunity/RLPSwift/branch/master/graph/badge.svg)](https://codecov.io/gh/bitfwdcommunity/RLPSwift/branch/master)
 
@@ -28,24 +28,12 @@ RLP.encode(nestedArrayOfString array: [Any], encodeStringsWith encoding: String.
 
 ## Installation
 
-### Cocoapods
-
-RLPSwift is available through [CocoaPods](http://cocoapods.org).
-
-To install RLPSwift via cocoapods, add the following line to your Podfile:
-
-```ruby
-pod 'RLPSwift'
-```
-
-Then run `pod install`.
-
 
 ### Swift Package Manager
 
 RLPSwift is available through [Swift Package Manager](https://swift.org/package-manager/).
 
-Once you have your Swift package set up, adding RLPSwift as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+Adding RLPSwift as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
 
 ```swift
 dependencies: [
