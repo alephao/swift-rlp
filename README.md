@@ -1,6 +1,6 @@
 # RLPSwift
 [![Swift 5.9.2](https://img.shields.io/badge/Swift-5.9.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
-[![Version](https://img.shields.io/badge/SPM-0.0.4-orange.svg?stlyle=flat)](https://github.com/alephao/RLPSwift/releases/tag/v0.0.4)
+[![Version](https://img.shields.io/badge/SPM-0.0.5-orange.svg?stlyle=flat)](https://github.com/alephao/RLPSwift/releases/tag/v0.0.5)
 
 This is a basic Swift implementation of Recursive Length Prefix Encoding, a serialisation method for encoding arbitrarily structured binary data (byte arrays).
 
@@ -35,7 +35,7 @@ Adding RLPSwift as a dependency is as easy as adding it to the `dependencies` va
 
 ```swift
 dependencies: [
-  .package(url: "https://github.com/alephao/RLPSwift.git", from: "0.0.4")
+  .package(url: "https://github.com/alephao/RLPSwift.git", from: "0.0.5")
 ]
 ```
 
