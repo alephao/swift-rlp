@@ -1,11 +1,11 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.9
 
 import PackageDescription
 
 let package = Package(
     name: "RLPSwift",
     platforms: [
-        .iOS(.v9),
+        .iOS(.v12),
         .macOS(.v10_14)
     ],
     products: [

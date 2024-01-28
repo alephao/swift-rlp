@@ -1,5 +1,5 @@
 # RLPSwift
-[![Swift 5.3](https://img.shields.io/badge/Swift-5.3-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Swift 5.9](https://img.shields.io/badge/Swift-5.9-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Version](https://img.shields.io/cocoapods/v/RLPSwift.svg?stlyle=flat)](https://cocoapods.org/pods/RLPSwift)
 [![Travis CI](https://travis-ci.org/bitfwdcommunity/RLPSwift.svg?branch=master)](https://travis-ci.org/bitfwdcommunity/RLPSwift)
 [![codecov.io](https://codecov.io/gh/bitfwdcommunity/RLPSwift/branch/master/graph/badge.svg)](https://codecov.io/gh/bitfwdcommunity/RLPSwift/branch/master)
