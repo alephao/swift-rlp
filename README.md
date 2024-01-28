@@ -17,13 +17,13 @@ You can read more about it here:
 RLP.encode(_ data: Data) -> Data
 
 // Encoding String
-RLP.encode(_ string: String, with encoding: String.Encoding = .ascii) throws -> Data
+RLP.encode(_ string: String, with encoding: String.Encoding = .utf8) throws -> Data
 
 // Encoding nested array of Data
 RLP.encode(nestedArrayOfData array: [Any]) throws -> Data
 
 // Encoding nested array of String
-RLP.encode(nestedArrayOfString array: [Any], encodeStringsWith encoding: String.Encoding = .ascii) throws -> Data
+RLP.encode(nestedArrayOfString array: [Any], encodeStringsWith encoding: String.Encoding = .utf8) throws -> Data
 ```
 
 ## Installation

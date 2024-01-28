@@ -72,7 +72,7 @@ public extension RLP {
 // MARK: String encoding
 
 public extension RLP {
-    static func encode(_ string: String, with encoding: String.Encoding = .ascii) throws -> Data {
+    static func encode(_ string: String, with encoding: String.Encoding = .utf8) throws -> Data {
         guard let data = string.data(using: encoding) else {
             throw Error.stringToData
         }
@@ -82,12 +82,12 @@ public extension RLP {
         return bytes
     }
 
-    static func encode(nestedArrayOfString array: [Any], encodeStringsWith encoding: String.Encoding = .ascii) throws -> Data {
+    static func encode(nestedArrayOfString array: [Any], encodeStringsWith encoding: String.Encoding = .utf8) throws -> Data {
         var output = Data()
 
         for item in array {
             if let string = item as? String {
-                output.append(try encode(string, with: .ascii))
+                output.append(try encode(string, with: .utf8))
             } else if let array = item as? [Any] {
                 output.append(try encode(nestedArrayOfString: array, encodeStringsWith: encoding))
             } else {
