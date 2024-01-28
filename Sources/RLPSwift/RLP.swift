@@ -19,7 +19,7 @@ public enum RLP {
 
 // MARK: Internal helpers
 
-internal extension RLP {
+extension RLP {
     static func binaryLength(of n: UInt32) -> UInt8 {
         return UInt8(ceil(log10(Double(n)) / log10(Double(UInt8.max))))
     }
@@ -39,10 +39,11 @@ internal extension RLP {
 
 // MARK: Data encoding
 
-public extension RLP {
-    static func encode(_ data: Data) -> Data {
+extension RLP {
+    public static func encode(_ data: Data) -> Data {
         if data.count == 1,
-            0x00 ... 0x7F ~= data[0] {
+            0x00...0x7F ~= data[0]
+        {
             return data
         } else {
             var result = encodeLength(UInt32(data.count), offset: 0x80)
@@ -51,7 +52,7 @@ public extension RLP {
         }
     }
 
-    static func encode(nestedArrayOfData array: [Any]) throws -> Data {
+    public static func encode(nestedArrayOfData array: [Any]) throws -> Data {
         var output = Data()
 
         for item in array {
@@ -71,8 +72,8 @@ public extension RLP {
 
 // MARK: String encoding
 
-public extension RLP {
-    static func encode(with encoding: String.Encoding = .utf8, _ string: String) throws -> Data {
+extension RLP {
+    public static func encode(with encoding: String.Encoding = .utf8, _ string: String) throws -> Data {
         guard let data = string.data(using: encoding) else {
             throw Error.stringToData
         }
@@ -82,7 +83,7 @@ public extension RLP {
         return bytes
     }
 
-    static func encode(encodeStringsWith encoding: String.Encoding = .utf8, nestedArrayOfString array: [Any]) throws -> Data {
+    public static func encode(encodeStringsWith encoding: String.Encoding = .utf8, nestedArrayOfString array: [Any]) throws -> Data {
         var output = Data()
 
         for item in array {

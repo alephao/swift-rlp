@@ -1,0 +1,9 @@
+{
+  "indentation" : {
+    "spaces" : 4
+  },
+  "lineLength" : 150,
+  "maximumBlankLines" : 1,
+  "tabWidth" : 8,
+  "version" : 1
+}

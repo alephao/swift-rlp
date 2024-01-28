@@ -1,6 +1,6 @@
 import XCTest
-@testable
-import RLPSwift
+
+@testable import RLPSwift
 
 class UInt32ExtensionsTests: XCTestCase {
     func testByteArrayLittleEndian() {
