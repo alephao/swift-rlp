@@ -1,7 +1,7 @@
 .PHONY: build
 build:
 	swift build \
-	--target RLPSwift
+	--target SwiftRLP
 
 .PHONY: test
 test:

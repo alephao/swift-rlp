@@ -1,6 +1,6 @@
 import XCTest
 
-@testable import RLPSwift
+@testable import SwiftRLP
 
 class EncodingTests: XCTestCase {}
 

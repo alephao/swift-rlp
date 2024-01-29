@@ -3,15 +3,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "RLPSwift",
+    name: "SwiftRLP",
     platforms: [
         .iOS(.v12),
         .macOS(.v10_14),
     ],
     products: [
         .library(
-            name: "RLPSwift",
-            targets: ["RLPSwift"]
+            name: "SwiftRLP",
+            targets: ["SwiftRLP"]
         ),
         .executable(name: "cli", targets: ["cli"]),
     ],
@@ -19,16 +19,16 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.2.0")
     ],
     targets: [
-        .target(name: "RLPSwift"),
+        .target(name: "SwiftRLP"),
         .testTarget(
-            name: "RLPSwiftTests",
-            dependencies: ["RLPSwift"]
+            name: "SwiftRLPTests",
+            dependencies: ["SwiftRLP"]
         ),
         .executableTarget(
             name: "cli",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
-                .target(name: "RLPSwift"),
+                .target(name: "SwiftRLP"),
             ]
         ),
     ]

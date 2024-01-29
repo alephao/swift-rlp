@@ -1,6 +1,6 @@
-# RLPSwift
+# SwiftRLP
 [![Swift 5.9.2](https://img.shields.io/badge/Swift-5.9.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
-[![Version](https://img.shields.io/badge/SPM-0.0.6-orange.svg?stlyle=flat)](https://github.com/alephao/RLPSwift/releases/tag/v0.0.6)
+[![Version](https://img.shields.io/badge/SPM-0.0.6-orange.svg?stlyle=flat)](https://github.com/alephao/swift-rlp/releases/tag/v0.0.6)
 
 This is a simple, pure Swift implementation of Recursive Length Prefix Encoding, a serialisation method for encoding arbitrarily structured binary data (byte arrays).
 
@@ -10,20 +10,28 @@ RLP Encoding is used in Ethereum. You can read more about it here:
 
 ## Library Usage
 
-RLPSwift is available through [Swift Package Manager](https://swift.org/package-manager/).
+SwiftRLP is available through [Swift Package Manager](https://swift.org/package-manager/).
 
-Adding RLPSwift as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+Adding SwiftRLP as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
 
 ```swift
 dependencies: [
-  .package(url: "https://github.com/alephao/RLPSwift.git", from: "0.0.6")
+  .package(url: "https://github.com/alephao/swift-rlp.git", from: "0.0.6")
+],
+targets: [
+    .target(
+      name: "MyTarget",
+      dependencies: [
+        .product(name: "SwiftRLP", package: "swift-rlp")
+      ]
+    ),
 ]
 ```
 
 ### Encoding
 
 ```swift
-import RLPSwift
+import SwiftRLP
 
 let encoder = RLPEncoder()
 
@@ -38,7 +46,7 @@ try encoder.encode(.array(["d", "o", "g"]))
 ### Decoding
 
 ```swift
-import RLPSwift
+import SwiftRLP
 
 let encodedData = try RLPEncoder().encode(string: "dog")
 
@@ -66,4 +74,4 @@ $ swift run cli decode 0x83646F67
 
 ## License
 
-RLPSwift is released under an [MIT](https://tldrlegal.com/license/mit-license) license. See [LICENSE](LICENSE) for more information.
+SwiftRLP is released under an [MIT](https://tldrlegal.com/license/mit-license) license. See [LICENSE](LICENSE) for more information.
