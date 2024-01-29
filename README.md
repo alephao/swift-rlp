@@ -8,20 +8,32 @@ You can read more about it here:
 * [Ethereum Wiki - RLP](https://github.com/ethereum/wiki/wiki/RLP)
 * [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf) (Appendix B)
 
-## Interface
+## Usage
+
+### Encoding
 
 ```swift
-// Encoding Data
-RLP.encode(_ data: Data) -> Data
+import RLPSwift
 
-// Encoding String
-RLP.encode(with encoding: String.Encoding = .utf8, _ string: String) throws -> Data
+let encoder = RLPEncoder()
 
-// Encoding nested array of Data
-RLP.encode(nestedArrayOfData array: [Any]) throws -> Data
+// String Encoding
+try encoder.encode(.string("dog"))
+try encoder.encode(string: "dog")
 
-// Encoding nested array of String
-RLP.encode(encodeStringsWith encoding: String.Encoding = .utf8, nestedArrayOfString array: [Any]) throws -> Data
+// Array Encoding
+try encoder.encode(.array(["d", "o", "g"]))
+```
+
+### Decoding
+
+```swift
+import RLPSwift
+
+let encodedData = try RLPEncoder().encode(string: "dog")
+
+let decoder = RLPDecoder()
+try decoder.decode(from: encodedData) // RLPValue.string("dog")
 ```
 
 ## Installation
