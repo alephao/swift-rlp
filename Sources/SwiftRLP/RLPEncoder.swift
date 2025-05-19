@@ -1,6 +1,6 @@
 import Foundation
 
-public class RLPEncoder {
+public struct RLPEncoder: Sendable {
     public enum Error: Swift.Error {
         case stringToData(String)
 
@@ -11,7 +11,7 @@ public class RLPEncoder {
         }
     }
 
-    public var encoding: String.Encoding = .utf8
+    public let encoding: String.Encoding = .utf8
 
     public init() {}
 

@@ -1,6 +1,6 @@
 import Foundation
 
-public class RLPDecoder {
+public struct RLPDecoder: Sendable {
     public enum Error: Swift.Error {
         case dataToString(Data)
         case emptyInput
@@ -15,7 +15,7 @@ public class RLPDecoder {
         }
     }
 
-    public var encoding: String.Encoding = .utf8
+    public let encoding: String.Encoding = .utf8
 
     public init() {}
 
@@ -43,7 +43,7 @@ public class RLPDecoder {
     }
 }
 
-enum DecodingLengthType {
+enum DecodingLengthType: Sendable {
     case string
     case array
 }
