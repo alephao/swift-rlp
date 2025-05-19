@@ -14,8 +14,4 @@ build-cli:
 
 .PHONY: fmt
 fmt:
-	swift-format \
-	--in-place \
-	--recursive \
-	--configuration .swift-format \
-	.
+	swift format -i -r -p Sources Tests Package.swift
