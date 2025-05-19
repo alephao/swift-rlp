@@ -1,6 +1,6 @@
-# SwiftRLP
-[![Swift 5.9.2](https://img.shields.io/badge/Swift-5.9.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
-[![Version](https://img.shields.io/badge/SPM-0.0.6-orange.svg?stlyle=flat)](https://github.com/alephao/swift-rlp/releases/tag/v0.0.6)
+# RLP
+[![Swift 6.1](https://img.shields.io/badge/Swift-6.1-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Version](https://img.shields.io/badge/SPM-0.0.6-orange.svg?stlyle=flat)](https://github.com/alephao/swift-rlp/releases/tag/v1.0.0)
 
 This is a simple, pure Swift implementation of Recursive Length Prefix Encoding, a serialisation method for encoding arbitrarily structured binary data (byte arrays).
 
@@ -10,19 +10,19 @@ RLP Encoding is used in Ethereum. You can read more about it here:
 
 ## Library Usage
 
-SwiftRLP is available through [Swift Package Manager](https://swift.org/package-manager/).
+RLP is available through [Swift Package Manager](https://swift.org/package-manager/).
 
-Adding SwiftRLP as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+Adding RLP as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
 
 ```swift
 dependencies: [
-  .package(url: "https://github.com/alephao/swift-rlp.git", from: "0.0.6")
+  .package(url: "https://github.com/alephao/swift-rlp.git", from: "1.0.0")
 ],
 targets: [
     .target(
       name: "MyTarget",
       dependencies: [
-        .product(name: "SwiftRLP", package: "swift-rlp")
+        .product(name: "RLP", package: "swift-rlp")
       ]
     ),
 ]
@@ -31,7 +31,7 @@ targets: [
 ### Encoding
 
 ```swift
-import SwiftRLP
+import RLP
 
 let encoder = RLPEncoder()
 
@@ -46,7 +46,7 @@ try encoder.encode(.array(["d", "o", "g"]))
 ### Decoding
 
 ```swift
-import SwiftRLP
+import RLP
 
 let encodedData = try RLPEncoder().encode(string: "dog")
 
@@ -74,4 +74,4 @@ $ swift run cli decode 0x83646F67
 
 ## License
 
-SwiftRLP is released under an [MIT](https://tldrlegal.com/license/mit-license) license. See [LICENSE](LICENSE) for more information.
+RLP is released under an [MIT](https://tldrlegal.com/license/mit-license) license. See [LICENSE](LICENSE) for more information.
