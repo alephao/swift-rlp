@@ -1,6 +1,6 @@
 # RLP
 [![Swift 6.1](https://img.shields.io/badge/Swift-6.1-orange.svg?style=flat)](https://developer.apple.com/swift/)
-[![Version](https://img.shields.io/badge/SPM-1.0.9-orange.svg?stlyle=flat)](https://github.com/alephao/swift-rlp/releases/tag/v1.0.0)
+[![Version](https://img.shields.io/badge/SPM-1.0.0-orange.svg?stlyle=flat)](https://github.com/alephao/swift-rlp/releases/tag/v1.0.0)
 
 This is a simple, pure Swift implementation of Recursive Length Prefix Encoding, a serialisation method for encoding arbitrarily structured binary data (byte arrays).
 
