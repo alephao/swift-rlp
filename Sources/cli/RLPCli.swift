@@ -1,4 +1,4 @@
-import ArgumentParser
+@preconcurrency import ArgumentParser
 import Foundation
 import SwiftRLP
 
@@ -28,7 +28,7 @@ struct RLPCli: ParsableCommand {
         }
     }
 
-    static var configuration = CommandConfiguration(
+    static let configuration = CommandConfiguration(
         abstract: "A utility for performing rlp encoding/decoding.",
         subcommands: [Encode.self, Decode.self]
     )
