@@ -15,20 +15,21 @@ public struct RLPEncoder: Sendable {
 
     public init() {}
 
-    public func encode(_ input: RLPValue) throws -> Data {
+    public func encode(_ input: RLPValue) throws(RLPEncoder.Error) -> Data {
         switch input {
         case let .string(str):
             return try encode(string: str)
 
         case let .array(arr):
-            let output = try arr.reduce(into: Data()) { acc, val in
-                acc += try encode(val)
+            var output = Data()
+            for value in arr {
+                output.append(try encode(value))
             }
             return encodeLength(UInt(output.count), offset: 0xc0) + output
         }
     }
 
-    public func encode(string input: String) throws -> Data {
+    public func encode(string input: String) throws(RLPEncoder.Error) -> Data {
         guard let strData = input.data(using: encoding) else {
             throw Error.stringToData(input)
         }

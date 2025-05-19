@@ -19,7 +19,7 @@ public struct RLPDecoder: Sendable {
 
     public init() {}
 
-    public func decode(from input: Data) throws -> RLPValue {
+    public func decode(from input: Data) throws(RLPDecoder.Error) -> RLPValue {
         if input.count == 0 {
             return .string("")
         }
@@ -54,7 +54,7 @@ extension Data {
     }
 }
 
-func decodeLength(_ input: Data) throws -> (offset: Int, size: Int, DecodingLengthType) {
+func decodeLength(_ input: Data) throws(RLPDecoder.Error) -> (offset: Int, size: Int, DecodingLengthType) {
     let length = input.count
     if length == 0 {
         throw RLPDecoder.Error.emptyInput
@@ -97,7 +97,7 @@ func decodeLength(_ input: Data) throws -> (offset: Int, size: Int, DecodingLeng
     throw RLPDecoder.Error.invalidInput
 }
 
-func toInteger(_ data: Data) throws -> Int {
+func toInteger(_ data: Data) throws(RLPDecoder.Error) -> Int {
     switch data.count {
     case 0:
         throw RLPDecoder.Error.emptyInput
