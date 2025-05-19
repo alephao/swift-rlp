@@ -1,6 +1,6 @@
 import ArgumentParser
 import Foundation
-import SwiftRLP
+import RLP
 
 @main
 struct RLPCli: ParsableCommand {

@@ -1,13 +1,13 @@
 import Foundation
 import Testing
 
-@testable import SwiftRLP
+@testable import RLP
 
 struct RLPEncoderTests {
   @Test func binaryLength() {
-    #expect(SwiftRLP.binaryLength(of: 0xFF) == 1)
-    #expect(SwiftRLP.binaryLength(of: 0xFFF) == 2)
-    #expect(SwiftRLP.binaryLength(of: 0xFFFF) == 3)
+    #expect(RLP.binaryLength(of: 0xFF) == 1)
+    #expect(RLP.binaryLength(of: 0xFFF) == 2)
+    #expect(RLP.binaryLength(of: 0xFFFF) == 3)
   }
 
   @Test func encodeLengthSmallerThanOrEqualTo55() {

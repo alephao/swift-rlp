@@ -1,7 +1,7 @@
 import Foundation
 import Testing
 
-@testable import SwiftRLP
+@testable import RLP
 
 struct RLPDecoderTests {
   func assertRoundtrip(of value: RLPValue) throws {
