@@ -15,3 +15,7 @@ build-cli:
 .PHONY: fmt
 fmt:
 	swift format -i -r -p Sources Tests Package.swift
+
+.PHONY: lint
+lint:
+	swift format lint -r -p Sources Tests Package.swift
